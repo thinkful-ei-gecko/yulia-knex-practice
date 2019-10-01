@@ -1,26 +1,19 @@
-# Express Boilerplate!
+# 1. Get all items that contain text
 
-This is a boilerplate project used for starting new projects!
+A function that takes one parameter for searchTerm which will be any string
+The function will query the shopping_list table using Knex methods and select the rows which have a name that contains the searchTerm using a case insensitive match.
 
-## Set up
+# 2. Get all items paginated
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+A function that takes one parameter for pageNumber which will be a number
+The function will query the shopping_list table using Knex methods and select the pageNumber page of rows paginated to 6 items per page.
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+# 3. Get all items added after date
 
-## Scripts
+A function that takes one parameter for daysAgo which will be a number representing a number of days.
+This function will query the shopping_list table using Knex methods and select the rows which have a date_added that is greater than the daysAgo.
 
-Start the application `npm start`
+# 4. Get the total cost for each category
 
-Start nodemon for the application `npm run dev`
-
-Run the tests `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+A function that takes no parameters
+The function will query the shopping_list table using Knex methods and select the rows grouped by their category and showing the total price for each category.
