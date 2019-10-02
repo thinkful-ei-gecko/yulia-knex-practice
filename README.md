@@ -1,3 +1,4 @@
+# Databases with Node drill:
 # 1. Get all items that contain text
 
 A function that takes one parameter for searchTerm which will be any string
@@ -17,3 +18,7 @@ This function will query the shopping_list table using Knex methods and select t
 
 A function that takes no parameters
 The function will query the shopping_list table using Knex methods and select the rows grouped by their category and showing the total price for each category.
+
+# Building services
+ src/shopping-list-service.js
+ test/shopping-list-service.spec.js
